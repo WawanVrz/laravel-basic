@@ -27,6 +27,7 @@ class ItemController extends Controller
     {
         // Ambil semua kategori untuk pilihan dropdown di form input barang
         $aaa=1;
+        $bbb=2;
         $categories = Category::all();
         return view('items.create', compact('categories'));
     }
