@@ -17,7 +17,6 @@ class ItemController extends Controller
             ->when($search, function ($query, $search) {
                 return $query->where('name', 'like', "%{$search}%");
             })
-            ->paginate(5)
             ->withQueryString();
 
         return view('items.index', compact('items'));
